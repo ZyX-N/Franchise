@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: var(--font-nunito), sans-serif;
+}
+
+.bg-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/image/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0,
+}
+
+.bg-banner-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/side.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0,
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.custom-container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.gold-theme-heading {
+    text-align: center;
+    color: #b98b64;
+    letter-spacing: 6px;
+    position: relative;
+}
+
+.gold-theme-heading::after,
+.gold-theme-heading::before {
+    content: "";
+    background-image: url("../assets/image/before.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 10px;
+}
+
+.gold-theme-heading::after {
+    left: calc(100% + 30px);
+}
+
+.gold-theme-heading::before {
+    right: calc(100% + 30px);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(219, 218, 218);
+    margin: 80px 0;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+@media only screen and (max-width:640px) {
+    .custom-container {
+        width: 100%;
+        margin: 0;
+    }
+}
