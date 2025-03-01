@@ -132,15 +132,17 @@ export default function Home() {
               <div className="size-full flex justify-center items-center bg-white text-black">
                 <div className="border border-[#bf9877] p-8 bg-transparent flex flex-col justify-center items-center w-full">
                   <p className="text-center">
-                    <strong>ZORRO CLUB</strong> Franchise offers a truly unique
-                    Night life experience in this plethora of more or less
-                    similar options. It is a space designed to pamper the
-                    discerning globetrotting clientele with the best in terms of
-                    food, beverages, service. - which they can enjoy with their
-                    family, friends, colleagues in a spacious lounge or
-                    exclusive private dining rooms amongst the company of
-                    likeminded people who have arrived in life and want only the
-                    best.
+                    <strong>Restaurant Franchisee</strong> was founded with a
+                    clear goal: to make restaurant ownership more accessible to
+                    ambitious individuals looking to build a thriving business
+                    with reduced risk. We recognize the challenges and
+                    complexities of the restaurant industry, which is why we
+                    developed a franchise model that simplifies the process.
+                    Through our model, we provide aspiring restaurant owners
+                    with a proven path to success, offering expert guidance,
+                    comprehensive training, and a network of valuable resources
+                    that ensures continuous support and growth for every
+                    franchisee.
                   </p>
 
                   <Link
@@ -167,7 +169,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="px-4 sm:px-0">
-          <EnquiryForm />
+            <EnquiryForm />
           </div>
         </section>
 
@@ -187,6 +189,20 @@ export default function Home() {
         </section>
 
         <div className="divider"></div>
+
+        <section className="">
+          <div className="rounded-lg px-8 text-black mb-6 lg:mb-14">
+            <div className="flex justify-center">
+              <span className="gold-theme-heading">ENQUIRY</span>
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-medium text-center tracking-wider mt-6 font-serif">
+              Contact Us
+            </h2>
+          </div>
+          <div className="px-4 sm:px-0">
+            <EnquiryForm />
+          </div>
+        </section>
       </ParentHomeWrapper>
     </div>
   );

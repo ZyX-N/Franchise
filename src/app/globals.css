@@ -7,14 +7,16 @@
 }
 
 .bg-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/image/banner.jpg");
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/banner.jpg"); */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/banner-new.jpg"); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/image/side.jpeg");
     background-size: cover;
     background-position: center;
     z-index: 0,
 }
 
 .bg-banner-2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/side.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/center.jpeg");
     background-size: cover;
     background-position: center;
     z-index: 0,

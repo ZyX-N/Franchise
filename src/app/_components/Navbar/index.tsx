@@ -25,9 +25,9 @@ const Navbar = ({
         <Bars3Icon className="size-10 text-white" />
       </button>
 
-      <Link href="/" className="hidden sm:block h-full w-96">
+      <Link href="/" className="hidden sm:block h-[90%] w-96">
         <img
-          src="https://www.brandsandbranches.com/assets/img/logo.png"
+          src="/logo.png"
           alt="LOGO"
           className="object-contain size-full"
         />

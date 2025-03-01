@@ -9,7 +9,7 @@ const NunitoFont = Nunito({
   variable: "--font-nunito",
 });
 export const metadata: Metadata = {
-  title: "App",
+  title: "Restaurant Franchisee",
   description: "App",
 };
 

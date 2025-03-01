@@ -29,13 +29,16 @@ export default function Home() {
 
         <div className="w-full lg:w-1/2 px-2 lg:px-12">
           <p className="text-lg">
-            <strong>ZORRO CLUB Franchise</strong> offers a truly unique Night
-            life experience in this plethora of more or less similar options. It
-            is a space designed to pamper the discerning globetrotting clientele
-            with the best in terms of food, beverages, service. - which they can
-            enjoy with their family, friends, colleagues in a spacious lounge or
-            exclusive private dining rooms amongst the company of likeminded
-            people who have arrived in life and want only the best.
+            <strong>Restaurant Franchisee</strong> was founded with a clear
+            goal: to make restaurant ownership more accessible to ambitious
+            individuals looking to build a thriving business with reduced risk.
+            We recognize the challenges and complexities of the restaurant
+            industry, which is why we developed a franchise model that
+            simplifies the process. Through our model, we provide aspiring
+            restaurant owners with a proven path to success, offering expert
+            guidance, comprehensive training, and a network of valuable
+            resources that ensures continuous support and growth for every
+            franchisee.
           </p>
         </div>
       </div>
@@ -43,15 +46,14 @@ export default function Home() {
       <div className="flex flex-col-reverse lg:flex-row items-center gap-4 w-full py-6">
         <div className="w-full lg:w-1/2 px-2 lg:px-6">
           <p className="text-lg text-justify lg:text-right">
-            <strong>The spacious private dining</strong> <br />
-            Lounge that seats minimum 8-20 guests and can accommodate over 300+
-            gathering altogether . The EV sound is encompassing and acoustically
-            tuned to allow a conversations as well as a party atmosphere. The
-            light mood is versatile and dims as the night progresses and
-            Sharpies adds a classy touch when it comes on. The DJ console is
-            neatly tucked away at an end and the stage comes in for the live
-            performance and converts into elevated dancing spaces when the tempo
-            of the nigh picks up.
+            <strong>At Restaurant Franchisee</strong> <br />
+            We take pride in helping you achieve your dream of owning a
+            successful restaurant. We provide a clear, guided path to restaurant
+            ownership, ensuring you have everything you need to create a
+            thriving business. Your success is our success. Let's build your
+            restaurant business together. Reach out today to learn more about
+            how you can join the Restaurant Franchisee family and start your
+            journey toward restaurant ownership!
           </p>
         </div>
 
@@ -87,21 +89,21 @@ export default function Home() {
 
         <div className="w-full lg:w-1/2 px-2 lg:px-12">
           <p className="text-lg">
-            <strong>The Bar</strong>
-            <br /> The 24 feet bar takes center stage with a ceiling height
-            bottle display overflowing with the best of alcohol brands. The menu
-            lists over 120 spirits, 30 wines. Beer is avalible on tap as well as
-            in bottles. The cocktail menu uses a combination of classic &
-            contemporary mixology. Freshest fruits, herb and spice infusions,
-            smoked and molecular cocktails feature in the list. You will Feel
-            Alive will regularly host mixology sessions for its guests where
-            corporate, housewives & friends can try to mix their own exotic
-            concoctions. The bar is priced aggressively to encourage guests to
-            upgrade to a better drink - a better experience.
+          <strong>Our mission</strong> is to empower aspiring entrepreneurs
+            and seasoned business owners to achieve success in the restaurant
+            industry by offering a simplified, supportive, and proven franchise
+            model. We are dedicated to making restaurant ownership accessible,
+            providing our franchisees with expert guidance, comprehensive
+            training, and continuous operational support. Our goal is to help
+            you build a thriving, profitable restaurant business while
+            minimizing risk, so you can focus on delivering exceptional
+            experiences to your customers. We strive to create a community of
+            successful franchise owners, all working together to grow and
+            succeed.
           </p>
         </div>
       </div>
-
+{/* 
       <div className="flex flex-col-reverse lg:flex-row items-center gap-4 w-full py-6">
         <div className="w-full lg:w-1/2 px-2 lg:px-6">
           <p className="text-lg text-justify lg:text-right">
@@ -126,7 +128,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

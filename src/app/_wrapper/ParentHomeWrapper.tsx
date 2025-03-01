@@ -16,7 +16,7 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
   const [sideNavOpen, setSideNavOpen] = useState(false);
 
   return (
-    <div className="size-full relative">
+    <div className="size-full relative pb-10">
       <div className="w-full h-[60vh] sm:h-screen bg-banner text-white">
         <Navbar setOpen={setSideNavOpen} />
 
@@ -29,16 +29,16 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
         </div>
 
         <section className="mx-auto w-full sm:w-2/3 text-center flex flex-col gap-3 sm:gap-6 mt-10 sm:mt-20 px-4 sm:px-0 z-10">
-          <h1 className="text-3xl sm:text-5xl font-bold">
-            ZORRO - The Luxury Night Club Franchise
+          <h1 className="text-4xl sm:text-5xl font-bold">
+            Welcome to Restaurant Franchisee
           </h1>
-          <h2 className="text-lg sm:text-2xl font-medium sm:font-semibold">
-            Delhi & especially Gurgaon is fast becoming a truly cosmopolitan
-            city with an amalgamation of young entrepreneurs, corporates,
-            homemakers, etc from various walks of life. They are well-traveled
-            and well-informed about the best in terms of dining & night-out
-            trends. This globetrotting clientele is discerning and wants the
-            best in food, cocktails, service & overall experience.
+          <h2 className="text-lg sm:text-xl font-semibold sm:font-semibold">
+            At Restaurant Franchisee, we help entrepreneurs and investors
+            succeed in the restaurant industry through franchising. From site
+            selection to daily operations and marketing, we provide the support,
+            resources, and expertise needed to run a successful franchise.
+            Whether you're new to business or an experienced restaurateur, our
+            proven model ensures you have the tools and training to thrive.
           </h2>
         </section>
       </div>
