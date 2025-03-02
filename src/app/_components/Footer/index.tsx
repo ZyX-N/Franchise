@@ -87,8 +87,7 @@ const Footer = () => {
       <div className="border-t flex justify-center items-center py-3">
         <p className="text-gray-400 text-xl">
           &copy; 2025{" "}
-          <span className="font-semibold text-gray-200">Awesome</span>{" "}
-          Agency
+          <span className="font-semibold text-gray-200">Resturant Franchisee</span>{" "}
         </p>
       </div>
     </footer>

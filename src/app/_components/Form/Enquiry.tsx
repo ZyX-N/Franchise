@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Input from "../Input/Input";
 import Textarea from "../Input/Textarea";
-import Radio from "../Input/Radio";
+import Dropdown from "../Input/Dropdown";
 
 interface formDataProp {
   firstName: string;
@@ -12,30 +12,15 @@ interface formDataProp {
   phone: string;
   city: string;
   currentBusiness: string;
-  interestedIn: string;
+  preferredBrand: string;
   investmentRange: string;
-  interestedInRadio: string;
-  relevantExperience: "yes" | "no" | "";
-  partner: "yes" | "no" | "";
+  // interestedInRadio: string;
+  // relevantExperience: "yes" | "no" | "";
+  // partner: "yes" | "no" | "";
   comment: string;
 }
 
 export default function EnquiryForm() {
-  const [formData, setFormData] = useState<formDataProp>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    city: "",
-    currentBusiness: "",
-    interestedIn: "",
-    investmentRange: "",
-    interestedInRadio: "",
-    relevantExperience: "",
-    partner: "",
-    comment: "",
-  });
-
   const interestedInOptions = [
     { label: "Master Franchise", value: "master franchise" },
     { label: "Multi Unit Franchise", value: "multi unit franchise" },
@@ -52,6 +37,30 @@ export default function EnquiryForm() {
     { label: "No", value: "no" },
   ];
 
+  const investmentRangeOptions = [
+    { label: "1 Crore", value: "1 Crore" },
+    { label: "2 Crore", value: "2 Crore" },
+    { label: "3 Crore", value: "3 Crore" },
+  ];
+
+  const [formData, setFormData] = useState<formDataProp>({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    city: "",
+    currentBusiness: "",
+    preferredBrand: "",
+    investmentRange: investmentRangeOptions[0].value,
+    // interestedInRadio: "",
+    // relevantExperience: "",
+    // partner: "",
+    comment: "",
+  });
+
+  console.log(formData);
+  
+
   return (
     <div className="w-full rounded-md">
       <form className="w-full py-0 px-4 sm:px-10 lg:px-20 flex flex-col gap-3 sm:gap-6 justify-center">
@@ -62,6 +71,7 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               First Name
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
@@ -82,6 +92,7 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               Last Name
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
@@ -105,6 +116,7 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               Email
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
@@ -125,6 +137,7 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               Phone Number
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
@@ -148,6 +161,7 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               City
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
@@ -168,6 +182,7 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               Current Business
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
@@ -190,17 +205,19 @@ export default function EnquiryForm() {
               htmlFor="interested-in"
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
-              Interested In
+              {/* Interested In */}
+              Preferred Brand
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
             <Input
               type="text"
               id="interested-in"
-              value={formData.interestedIn}
+              value={formData.preferredBrand}
               setValue={(val: string) => {
                 setFormData((prev) => ({
                   ...prev,
-                  interestedIn: val,
+                  preferredBrand: val,
                 }));
               }}
             />
@@ -211,10 +228,11 @@ export default function EnquiryForm() {
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
               Investment Range
+              <span className="text-red-600 font-medium">*</span>
             </label>
 
-            <Input
-              type="text"
+            <Dropdown
+              option={investmentRangeOptions}
               id="investment-range"
               value={formData.investmentRange}
               setValue={(val: string) => {
@@ -227,7 +245,7 @@ export default function EnquiryForm() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="interested-in-radio"
@@ -248,9 +266,9 @@ export default function EnquiryForm() {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="related-experience"
@@ -271,9 +289,9 @@ export default function EnquiryForm() {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="partner"
@@ -294,7 +312,7 @@ export default function EnquiryForm() {
               }}
             />
           </div>
-        </div>
+        </div> */}
 
         <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
           <div className="w-full flex flex-col justify-start">
@@ -302,7 +320,7 @@ export default function EnquiryForm() {
               htmlFor="comment"
               className="block mb-0.5 text-md font-medium text-gray-900"
             >
-              Comment
+              Message
             </label>
 
             <Textarea

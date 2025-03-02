@@ -1,4 +1,5 @@
 import Image from "next/image";
+import about1 from "../../../assets/image/about-1.jpg"
 
 export default function Home() {
   return (
@@ -16,9 +17,7 @@ export default function Home() {
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center px-2 lg:px-6">
           <div className="p-1 border rounded-md border-gray-900">
             <Image
-              src={
-                "https://www.brandsandbranches.com/upload/gallery/main/banner-131725465251.jpg"
-              }
+              src={about1}
               alt="ZORRO"
               width={400}
               height={400}
