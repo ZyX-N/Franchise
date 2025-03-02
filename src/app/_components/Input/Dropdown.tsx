@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ChangeEvent, useState } from "react";
 
 interface DropdowProp {
@@ -42,12 +43,12 @@ export default function Dropdown({
         onBlur={blurHandler}
       />
       {dropdownOpen && (
-        <ul className="absolute top-full left-0 flex flex-col w-full rounded-md bg-white border shadow-lg">
+        <ul className="absolute top-full left-0 flex flex-col w-full rounded-md bg-white border-2 shadow-lg shadow-gray-300 max-h-[200px] overflow-x-hidden overflow-y-auto z-40">
           {option.map((item, idx) => (
             <li
               key={item.value}
-              className={`cursor-pointer h-10 flex items-center px-4 hover:bg-[rgba(0,0,0,0.1)] ${
-                idx !== 0 && idx !== option.length - 1 ? "border-y" : ""
+              className={`cursor-pointer min-h-10 flex items-center px-4 hover:bg-[rgba(0,0,0,0.1)] ${
+                idx !== 0 ? "border-t" : ""
               }`}
               onClick={() => {
                 setValue(item.value);
@@ -61,6 +62,17 @@ export default function Dropdown({
           ))}
         </ul>
       )}
+
+      <button
+        type="button"
+        className="absolute top-1/2 -translate-y-1/2 right-5 transition-all duration-300 ease-in-out"
+      >
+        <ChevronDownIcon
+          className={`size-4 text-gray-500 ${
+            dropdownOpen ? "rotate-180" : "rotate-0"
+          }`}
+        />
+      </button>
     </div>
   );
 }

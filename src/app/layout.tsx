@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 import Footer from "./_components/Footer";
+import Head from "next/head";
 
 const NunitoFont = Nunito({
   subsets: ["latin"],
@@ -20,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={NunitoFont.variable}>
+      <Head>
+        <link rel="icon" href="/icon.png" />
+      </Head>
       <body>
         {children}
         <Footer />

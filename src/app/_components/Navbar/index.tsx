@@ -1,6 +1,7 @@
 "use client";
 
 import { Bars3Icon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -17,6 +18,16 @@ const Navbar = ({
         classes || ""
       }`}
     >
+      <Link href="/" className="block md:hidden h-full w-28">
+        <Image
+          src="/logo.png"
+          alt="LOGO"
+          className="object-contain size-full"
+          height={80}
+          width={80}
+        />
+      </Link>
+
       <button
         type="button"
         className="inline sm:hidden text-white font-semibold bg-transparent ml-auto"
@@ -26,11 +37,7 @@ const Navbar = ({
       </button>
 
       <Link href="/" className="hidden sm:block h-[90%] w-96">
-        <img
-          src="/logo.png"
-          alt="LOGO"
-          className="object-contain size-full"
-        />
+        <img src="/logo.png" alt="LOGO" className="object-contain size-full" />
       </Link>
 
       <ul className="hidden sm:flex gap-8 text-lg font-medium items-center pr-10">

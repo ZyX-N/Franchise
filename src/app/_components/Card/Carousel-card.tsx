@@ -7,7 +7,6 @@ export default function CarouselCard({
   image: string;
   title: string;
 }) {
-  console.log(title);
 
   return (
     <div className="min-w-48 sm:min-w-[280px] rounded-md p-1 border-[1px] border-[#bf9877] text-[#bf9877]">
