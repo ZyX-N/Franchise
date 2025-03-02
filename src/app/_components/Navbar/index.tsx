@@ -13,7 +13,7 @@ const Navbar = ({
 }) => {
   return (
     <header
-      className={`relativew-full h-16 sm:h-24 flex items-center justify-between px-6 ${
+      className={`relative w-full h-16 sm:h-24 flex items-center justify-between px-6 ${
         classes || ""
       }`}
     >

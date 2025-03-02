@@ -7,9 +7,9 @@ const Footer = () => {
     {/* // <footer className="flex flex-col w-full text-xl bg-[#bf9877] text-white"> */}
       <div className="flex justify-between w-full py-16 pl-10 pr-20">
         <div className="flex flex-col w-1/4">
-          <a href="#" className="block h-20 w-96">
+          <a href="#" className="block h-20 w-full">
             <img
-              src="https://www.brandsandbranches.com/assets/img/logo.png"
+              src="/logo.png"
               alt="LOGO"
               className="object-contain size-full"
             />
