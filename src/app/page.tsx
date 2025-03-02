@@ -157,7 +157,7 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="divider"></div>
+        {/* <div className="divider"></div>
 
         <section className="">
           <div className="rounded-lg px-8 text-black mb-6 lg:mb-14">
@@ -171,7 +171,7 @@ export default function Home() {
           <div className="px-4 sm:px-0">
             <EnquiryForm />
           </div>
-        </section>
+        </section> */}
 
         <div className="divider"></div>
 
