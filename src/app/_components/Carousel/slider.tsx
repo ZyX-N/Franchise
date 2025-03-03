@@ -7,7 +7,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 export default function Slider({
   data,
 }: {
-  data: Array<{ name: string; image: string }>;
+  data: Array<{ name: string; image: any }>;
 }) {
   const scrollBox = useRef<HTMLDivElement | null>(null);
 
@@ -38,15 +38,15 @@ export default function Slider({
     }
   }
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      normalScroll();
-    }, 5000);
+  // useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     normalScroll();
+  //   }, 5000);
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
 
   return (
     <div className="relative flex p-1 w-[90%] md:w-[800px] lg:w-[1200px] mx-auto">

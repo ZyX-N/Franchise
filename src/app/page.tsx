@@ -13,12 +13,13 @@ import {
 } from "@heroicons/react/24/outline";
 import EnquiryForm from "./_components/Form/Enquiry";
 import Slider from "./_components/Carousel/slider";
+import Brands from "@/utils/data/Brands";
 
 export default function Home() {
   const iconStrokeWidth = 0.5;
   const data = {
     Head_Office_Located: {
-      name: "Gurgaon",
+      name: "Delhi",
       icon: <MapPinIcon strokeWidth={iconStrokeWidth} />,
     },
     Training_and_Support: {
@@ -51,46 +52,11 @@ export default function Home() {
     },
   };
 
-  const sliderData: Array<{ name: string; image: string }> = [
-    {
-      name: "Bellgio",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1715925702.jpg",
-    },
-    {
-      name: "Avatar",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1715924326.jpg",
-    },
-    {
-      name: "Banter",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1699087680.jpg",
-    },
-    {
-      name: "Dearie",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697472569.png",
-    },
-    {
-      name: "Birch",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697443050.png",
-    },
-    {
-      name: "Bardos La Cita",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697439492.png",
-    },
-    {
-      name: "Kipos",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697432180.png",
-    },
-  ];
+  const sliderData: Array<{ name: string; image: any }> = Brands;
 
   return (
-    <div className="">
+    <div>
+    {/* <div className="bg-[#212529]"> */}
       <ParentHomeWrapper>
         <section className="pt-16">
           <div className="rounded-lg px-8 text-black">

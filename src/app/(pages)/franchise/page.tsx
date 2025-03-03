@@ -1,43 +1,8 @@
 import FranchiseCard from "@/app/_components/Card/Franchise-card";
+import Brands from "@/utils/data/Brands";
 
 export default function Home() {
-  const franchiseData: Array<{ name: string; image: string }> = [
-    {
-      name: "Bellgio",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1715925702.jpg",
-    },
-    {
-      name: "Avatar",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1715924326.jpg",
-    },
-    {
-      name: "Banter",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1699087680.jpg",
-    },
-    {
-      name: "Dearie",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697472569.png",
-    },
-    {
-      name: "Birch",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697443050.png",
-    },
-    {
-      name: "Bardos La Cita",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697439492.png",
-    },
-    {
-      name: "Kipos",
-      image:
-        "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697432180.png",
-    },
-  ];
+  const franchiseData: Array<{ name: string; image: string }> = Brands;
 
   return (
     <section className="text-gray-600 body-font">

@@ -1,4 +1,4 @@
-import { CheckIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { ChangeEvent, useState } from "react";
 
 interface DropdowProp {
@@ -19,7 +19,6 @@ export default function Dropdown({
   option,
 }: DropdowProp) {
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-  const [inputSearch, setInputSearch] = useState<string>("");
 
   const focusHandler = () => {
     setDropdownOpen(true);
@@ -33,14 +32,7 @@ export default function Dropdown({
 
   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     let currentValue = e.target.value;
-    setInputSearch(currentValue);
-  };
-
-  const getInputValue: () => string = () => {
-    if (dropdownOpen) {
-      return inputSearch;
-    }
-    return value;
+    setValue(currentValue);
   };
 
   return (
@@ -48,7 +40,7 @@ export default function Dropdown({
       <input
         type="text"
         placeholder={placeholder || ""}
-        value={getInputValue()}
+        value={value}
         onChange={onChangeHandler}
         className={`${classes} bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-[#bf9877] focus:border-[#bf9877] outline-none block w-full p-2.5 cursor-pointer`}
         id={id}
@@ -59,27 +51,23 @@ export default function Dropdown({
         <ul className="absolute top-full left-0 flex flex-col w-full rounded-md bg-white border-2 shadow-lg shadow-gray-300 max-h-[200px] overflow-x-hidden overflow-y-auto z-40">
           {option.map(
             (item, idx) =>
-              item.value.includes(inputSearch || "") && (
+              item.value.includes(value || "") && (
                 <li
                   key={item.value}
+                  // className={`relative cursor-pointer min-h-10 flex items-center px-4 hover:bg-[rgba(0,0,0,0.1)] ${
+                  //   idx !== 0 ? "border-t" : ""
+                  // } ${item.value === value ? "bg-blue-200" : "bg-white"}`}
                   className={`relative cursor-pointer min-h-10 flex items-center px-4 hover:bg-[rgba(0,0,0,0.1)] ${
                     idx !== 0 ? "border-t" : ""
-                  } ${item.value === value ? "bg-blue-200" : "bg-white"}`}
+                  }`}
                   onClick={() => {
                     setValue(item.value);
-                    setInputSearch(item.value);
                     setTimeout(() => {
                       setDropdownOpen(false);
                     }, 200);
                   }}
                 >
                   {item.label}
-                  {item.value === value && (
-                    <CheckIcon
-                      className="size-4 text-blue-500 absolute right-4 top-1/2 -translate-y-1/2"
-                      strokeWidth={3}
-                    />
-                  )}
                 </li>
               )
           )}
