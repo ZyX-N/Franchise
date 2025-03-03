@@ -173,12 +173,13 @@ export default function EnquiryForm({ screen = "default" }) {
     <div className="w-full rounded-md">
       <form
         className={`w-full flex flex-col justify-center 
-          ${screen === "default" ? "gap-3 sm:gap-6 px-4 sm:px-10 lg:px-20 py-0" : ""}
-          ${screen === "pop-up" ? "gap-3 sm:gap-6 px-4 sm:px-10 py-10" : ""}
+          ${screen === "default" ? "gap-6 px-4 sm:px-10 lg:px-20 py-0" : ""}
+          ${screen === "pop-up" ? "gap-6 px-4 sm:px-10 py-8" : ""}
         `}
         onSubmit={submitHandler}
       >
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+
+        <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full sm:w-1/2 flex flex-col justify-start relative">
             <label
               htmlFor="first-name"
@@ -205,7 +206,7 @@ export default function EnquiryForm({ screen = "default" }) {
             />
 
             {error?.firstName && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.firstName}
               </span>
             )}
@@ -236,14 +237,14 @@ export default function EnquiryForm({ screen = "default" }) {
             />
 
             {error?.lastName && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.lastName}
               </span>
             )}
           </div>
         </div>
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full sm:w-1/2 flex flex-col justify-start relative">
             <label
               htmlFor="email"
@@ -270,7 +271,7 @@ export default function EnquiryForm({ screen = "default" }) {
             />
 
             {error?.email && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.email}
               </span>
             )}
@@ -301,14 +302,14 @@ export default function EnquiryForm({ screen = "default" }) {
             />
 
             {error?.phoneNumber && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.phoneNumber}
               </span>
             )}
           </div>
         </div>
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full sm:w-1/2 flex flex-col justify-start relative">
             <label
               htmlFor="city"
@@ -334,7 +335,7 @@ export default function EnquiryForm({ screen = "default" }) {
               }}
             />
             {error?.city && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.city}
               </span>
             )}
@@ -365,14 +366,14 @@ export default function EnquiryForm({ screen = "default" }) {
             />
 
             {error?.currentBusiness && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.currentBusiness}
               </span>
             )}
           </div>
         </div>
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full sm:w-1/2 flex flex-col justify-start relative">
             <label className="block mb-0.5 text-md font-medium text-gray-900">
               Preferred Brand
@@ -395,7 +396,7 @@ export default function EnquiryForm({ screen = "default" }) {
               }}
             />
             {error?.preferredBrand && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.preferredBrand}
               </span>
             )}
@@ -426,14 +427,14 @@ export default function EnquiryForm({ screen = "default" }) {
             />
 
             {error?.investmentRange && (
-              <span className="text-red-500 text-xs absolute top-full left-0">
+              <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
                 {error?.investmentRange}
               </span>
             )}
           </div>
         </div>
 
-        {/* <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="interested-in-radio"
@@ -456,7 +457,7 @@ export default function EnquiryForm({ screen = "default" }) {
           </div>
         </div> */}
 
-        {/* <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="related-experience"
@@ -479,7 +480,7 @@ export default function EnquiryForm({ screen = "default" }) {
           </div>
         </div> */}
 
-        {/* <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        {/* <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="partner"
@@ -502,7 +503,7 @@ export default function EnquiryForm({ screen = "default" }) {
           </div>
         </div> */}
 
-        <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
+        <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full flex flex-col justify-start">
             <label
               htmlFor="comment"

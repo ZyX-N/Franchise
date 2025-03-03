@@ -7,8 +7,6 @@
 }
 
 .bg-banner {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/banner.jpg"); */
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/image/banner-new.jpg"); */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/image/side.jpeg");
     background-size: cover;
     background-position: center;
@@ -79,6 +77,15 @@ input[type="number"] {
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #b98b64;
+    border-radius: 4px;
 }
 
 
