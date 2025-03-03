@@ -49,9 +49,9 @@ export default function EnquiryForm() {
   ];
 
   const investmentRangeOptions = [
-    { label: "1 Crore", value: "1 Crore" },
-    { label: "2 Crore", value: "2 Crore" },
-    { label: "3 Crore", value: "3 Crore" },
+    { label: "1 Crore - 3 Crore", value: "1 Crore - 3 Crore" },
+    { label: "3 Crore - 5 Crore", value: "3 Crore - 5 Crore" },
+    { label: "5 Crore +", value: "5 Crore +" },
   ];
 
   const preferredBrandOptions = [
