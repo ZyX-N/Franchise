@@ -55,8 +55,8 @@ export default function Home() {
   const sliderData: Array<{ name: string; image: any }> = Brands;
 
   return (
-    <div>
-    {/* <div className="bg-[#212529]"> */}
+    <div className="relative">
+      {/* <div className="bg-[#212529]"> */}
       <ParentHomeWrapper>
         <section className="pt-16">
           <div className="rounded-lg px-8 text-black">

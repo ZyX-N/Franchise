@@ -43,8 +43,10 @@ const Footer = () => {
             </div>
             <div className="flex flex-col w-full md:w-1/2">
               <h6 className="text-2xl font-bold text-[#eea76d]">Enquiry</h6>
-              <p className="text-sm md:text-base">Email : resturantfranchisee@gmail.com</p>
-              <p className="text-sm md:text-base">Phone : +91 7291916555</p>
+              <p className="text-sm md:text-base">
+                Email : restaurantfranchisee3@gmail.com
+              </p>
+              <p className="text-sm md:text-base">Phone : +91 7004348690</p>
             </div>
           </div>
         </div>

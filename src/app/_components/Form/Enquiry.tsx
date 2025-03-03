@@ -20,7 +20,7 @@ interface formDataProp {
   comment: string;
 }
 
-export default function EnquiryForm() {
+export default function EnquiryForm({ screen = "default" }) {
   const [error, setError] = useState({
     firstName: "",
     lastName: "",
@@ -32,21 +32,21 @@ export default function EnquiryForm() {
     investmentRange: "",
   });
 
-  const interestedInOptions = [
-    { label: "Master Franchise", value: "master franchise" },
-    { label: "Multi Unit Franchise", value: "multi unit franchise" },
-    { label: "Unit Franchise", value: "unit franchise" },
-  ];
+  // const interestedInOptions = [
+  //   { label: "Master Franchise", value: "master franchise" },
+  //   { label: "Multi Unit Franchise", value: "multi unit franchise" },
+  //   { label: "Unit Franchise", value: "unit franchise" },
+  // ];
 
-  const relevantExperienceOptions = [
-    { label: "Yes", value: "yes" },
-    { label: "No", value: "no" },
-  ];
+  // const relevantExperienceOptions = [
+  //   { label: "Yes", value: "yes" },
+  //   { label: "No", value: "no" },
+  // ];
 
-  const partnerOptions = [
-    { label: "Yes", value: "yes" },
-    { label: "No", value: "no" },
-  ];
+  // const partnerOptions = [
+  //   { label: "Yes", value: "yes" },
+  //   { label: "No", value: "no" },
+  // ];
 
   const investmentRangeOptions = [
     { label: "1 Crore - 3 Crore", value: "1 Crore - 3 Crore" },
@@ -172,7 +172,10 @@ export default function EnquiryForm() {
   return (
     <div className="w-full rounded-md">
       <form
-        className="w-full py-0 px-4 sm:px-10 lg:px-20 flex flex-col gap-3 sm:gap-6 justify-center"
+        className={`w-full flex flex-col justify-center 
+          ${screen === "default" ? "gap-3 sm:gap-6 px-4 sm:px-10 lg:px-20 py-0" : ""}
+          ${screen === "pop-up" ? "gap-3 sm:gap-6 px-4 sm:px-10 py-10" : ""}
+        `}
         onSubmit={submitHandler}
       >
         <div className="w-full flex flex-col sm:flex-row gap-3 sm:gap-6">
@@ -523,6 +526,12 @@ export default function EnquiryForm() {
         </div>
 
         <div className="w-full flex justify-end">
+          {/* <button
+            type="submit"
+            className="bg-[#bf9877] text-white rounded-3xl font-medium px-8 py-3 hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            Close
+          </button> */}
           <button
             type="submit"
             className="bg-[#bf9877] text-white rounded-3xl font-medium px-8 py-3 hover:scale-105 transition-all duration-300 ease-in-out"

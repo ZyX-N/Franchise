@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../_components/Navbar";
 import Sidenav from "../_components/Sidebar/Sidenav";
+import ContactPopUp from "../_components/Modal/Contact-Pop-Up";
 
 interface parentHomeWrapperProps {
   children: React.ReactNode;
@@ -13,10 +14,23 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
 }: {
   children: any;
 }) => {
+  const [contactPopupOpen, setContactPopupOpen] = useState(false);
+  // const [contactPopupOpen, setContactPopupOpen] = useState(true);
   const [sideNavOpen, setSideNavOpen] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setContactPopupOpen(true);
+    }, 5000);
+  }, []);
 
   return (
     <div className="size-full relative pb-10">
+      {contactPopupOpen && (
+        <div className="fixed size-full top-0 left-0 z-50">
+          <ContactPopUp setOpen={setContactPopupOpen} />
+        </div>
+      )}
       <div className="w-full h-[60vh] sm:h-screen bg-banner text-white">
         <Navbar setOpen={setSideNavOpen} />
 
