@@ -166,7 +166,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="px-4 sm:px-0">
-            <EnquiryForm />
+            <EnquiryForm screen="default" />
           </div>
         </section>
       </ParentHomeWrapper>
