@@ -26,7 +26,7 @@ export default function FranchiseCard({
           <h2 className="title-font font-medium text-lg text-gray-900">
             {title}
           </h2>
-          <div className="w-full flex justify-center mt-2">
+          {/* <div className="w-full flex justify-center mt-2">
             <button
               type="button"
               className="bg-[#bf9877] text-white rounded-md font-medium w-full py-2 hover:scale-105 transition-all duration-300 ease-in-out"
@@ -34,10 +34,10 @@ export default function FranchiseCard({
             >
               View
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
-      {open && (
+      {/* {open && (
         <div className="fixed size-full top-0 left-0 z-50">
         <FullScreenSlider
           data={[
@@ -57,7 +57,7 @@ export default function FranchiseCard({
           setOpen={setOpen}
         />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
