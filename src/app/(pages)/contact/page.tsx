@@ -1,7 +1,6 @@
 import EnquiryForm from "@/app/_components/Form/Enquiry";
 
 export default function Home() {
-
   return (
     <section className="text-gray-600 body-font">
       <div className="px-4 lg:px-10 py-12 mx-auto">
@@ -14,7 +13,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <EnquiryForm />
+        <EnquiryForm screen="default" />
       </div>
     </section>
   );

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Input from "../Input/Input";
 import Textarea from "../Input/Textarea";
 import Dropdown from "../Input/Dropdown";
+import { postCall } from "../../../service/apiCall";
+import { useRouter } from "next/navigation";
 
 interface formDataProp {
   firstName: string;
@@ -14,13 +16,16 @@ interface formDataProp {
   currentBusiness: string;
   preferredBrand: string;
   investmentRange: string;
-  // interestedInRadio: string;
-  // relevantExperience: "yes" | "no" | "";
-  // partner: "yes" | "no" | "";
   comment: string;
 }
 
-export default function EnquiryForm({ screen = "default" }) {
+export default function EnquiryForm({
+  screen = "default",
+}: {
+  screen: string;
+}) {
+  const router = useRouter();
+
   const [error, setError] = useState({
     firstName: "",
     lastName: "",
@@ -31,22 +36,6 @@ export default function EnquiryForm({ screen = "default" }) {
     preferredBrand: "",
     investmentRange: "",
   });
-
-  // const interestedInOptions = [
-  //   { label: "Master Franchise", value: "master franchise" },
-  //   { label: "Multi Unit Franchise", value: "multi unit franchise" },
-  //   { label: "Unit Franchise", value: "unit franchise" },
-  // ];
-
-  // const relevantExperienceOptions = [
-  //   { label: "Yes", value: "yes" },
-  //   { label: "No", value: "no" },
-  // ];
-
-  // const partnerOptions = [
-  //   { label: "Yes", value: "yes" },
-  //   { label: "No", value: "no" },
-  // ];
 
   const investmentRangeOptions = [
     { label: "1 Crore - 3 Crore", value: "1 Crore - 3 Crore" },
@@ -167,6 +156,23 @@ export default function EnquiryForm({ screen = "default" }) {
     if (!checkValidation()) {
       return null;
     }
+
+    let payload = {
+      firstName: formData?.firstName || "",
+      lastName: formData?.lastName || "",
+      email: formData?.email || "",
+      phoneNumber: formData?.phone || "",
+      city: formData?.city || "",
+      currentBusiness: formData?.currentBusiness || "",
+      preferredBrand: formData?.preferredBrand || "",
+      investmentRange: formData?.investmentRange || "",
+      message: formData?.comment || "",
+    };
+    let response = await postCall("/enquiry", {}, payload);
+    console.log(response);
+    if (response.status) {
+      router.push("/thank-you");
+    }
   };
 
   return (
@@ -178,7 +184,6 @@ export default function EnquiryForm({ screen = "default" }) {
         `}
         onSubmit={submitHandler}
       >
-
         <div className="w-full flex flex-col sm:flex-row gap-6">
           <div className="w-full sm:w-1/2 flex flex-col justify-start relative">
             <label
