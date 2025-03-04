@@ -52,13 +52,20 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t flex justify-center items-center py-3">
+      <div className="border-t flex justify-center items-center py-3 relative">
         <p className="text-gray-400 text-xl">
           &copy; 2025{" "}
           <span className="font-semibold text-gray-200">
             Resturant Franchisee
           </span>{" "}
         </p>
+
+        <Link
+          href="/privacy-policy"
+          className="absolute top-1/2 -translate-y-1/2 right-5 underline text-white hover:text-blue-600"
+        >
+          Privacy Policy
+        </Link>
       </div>
     </footer>
   );

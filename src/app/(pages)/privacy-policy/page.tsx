@@ -11,7 +11,7 @@ export default function Home() {
             </h2>
           </div>
   
-          <div className="bg-white rounded-lg shadow-lg">
+          <div className="bg-white">
             <p className="text-lg mb-4">
               Welcome to <strong>Restaurant Franchisee</strong> ("Company," "we," "our," or "us"). We respect your privacy and are committed to protecting your personal information.
             </p>
