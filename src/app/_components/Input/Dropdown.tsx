@@ -53,7 +53,7 @@ export default function Dropdown({
             (item, idx) =>
               item.value.includes(value || "") && (
                 <li
-                  key={item.value}
+                  key={`${item.value}-${idx}`}
                   // className={`relative cursor-pointer min-h-10 flex items-center px-4 hover:bg-[rgba(0,0,0,0.1)] ${
                   //   idx !== 0 ? "border-t" : ""
                   // } ${item.value === value ? "bg-blue-200" : "bg-white"}`}

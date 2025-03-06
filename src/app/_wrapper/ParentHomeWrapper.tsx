@@ -15,7 +15,6 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
   children: any;
 }) => {
   const [contactPopupOpen, setContactPopupOpen] = useState(false);
-  // const [contactPopupOpen, setContactPopupOpen] = useState(true);
   const [sideNavOpen, setSideNavOpen] = useState(false);
 
   useEffect(() => {
@@ -31,7 +30,7 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
           <ContactPopUp setOpen={setContactPopupOpen} />
         </div>
       )}
-      <div className="w-full h-[60vh] sm:h-screen bg-banner text-white">
+      <div className="w-full h-[60vh] sm:h-screen bg-banner text-white overflow-hidden">
         <Navbar setOpen={setSideNavOpen} />
 
         <div
@@ -42,9 +41,9 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
           <Sidenav setOpen={setSideNavOpen} />
         </div>
 
-        <section className="mx-auto w-full sm:w-2/3 text-center flex flex-col gap-3 sm:gap-6 mt-10 sm:mt-20 px-4 sm:px-0 z-10">
+        <section className="mx-auto w-full sm:h-[calc(100%-200px)] sm:w-2/3 text-center gap-3 sm:gap-6 px-4 sm:px-0 z-10 flex flex-col sm:items-center sm:justify-center">
           <h1 className="text-4xl sm:text-5xl font-bold">
-            Welcome to Restaurant Franchisee
+            Welcome to Restaurant Franchisee1
           </h1>
           <h2 className="text-lg sm:text-xl font-semibold sm:font-semibold">
             At Restaurant Franchisee, we help entrepreneurs and investors

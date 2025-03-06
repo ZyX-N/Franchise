@@ -6,6 +6,7 @@ import Textarea from "../Input/Textarea";
 import Dropdown from "../Input/Dropdown";
 import { postCall } from "../../../service/apiCall";
 import { useRouter } from "next/navigation";
+import cities from "../../../utils/data/Indian_Cities";
 
 interface formDataProp {
   firstName: string;
@@ -61,16 +62,18 @@ export default function EnquiryForm({
     { label: "Daddy", value: "Daddy" },
   ];
 
-  const cityOption = [
-    { label: "Bangalore", value: "Bangalore" },
-    { label: "Delhi", value: "Delhi" },
-    { label: "Chennai", value: "Chennai" },
-    { label: "Hyderabad", value: "Hyderabad" },
-    { label: "Mumbai", value: "Mumbai" },
-    { label: "Pune", value: "Pune" },
-    { label: "Kolkata", value: "Kolkata" },
-    { label: "Ahmedabad", value: "Ahmedabad" },
-  ];
+  // const cityOption = [
+  //   { label: "Bangalore", value: "Bangalore" },
+  //   { label: "Delhi", value: "Delhi" },
+  //   { label: "Chennai", value: "Chennai" },
+  //   { label: "Hyderabad", value: "Hyderabad" },
+  //   { label: "Mumbai", value: "Mumbai" },
+  //   { label: "Pune", value: "Pune" },
+  //   { label: "Kolkata", value: "Kolkata" },
+  //   { label: "Ahmedabad", value: "Ahmedabad" },
+  // ];
+
+  const cityOption = cities;
 
   const [formData, setFormData] = useState<formDataProp>({
     firstName: "",
