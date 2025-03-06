@@ -51,7 +51,9 @@ export default function Dropdown({
         <ul className="absolute top-full left-0 flex flex-col w-full rounded-md bg-white border-2 shadow-lg shadow-gray-300 max-h-[200px] overflow-x-hidden overflow-y-auto z-40">
           {option.map(
             (item, idx) =>
-              item.value.includes(value || "") && (
+              item?.value
+                ?.toLowerCase()
+                .includes(value.toLowerCase() || "") && (
                 <li
                   key={`${item.value}-${idx}`}
                   // className={`relative cursor-pointer min-h-10 flex items-center px-4 hover:bg-[rgba(0,0,0,0.1)] ${
