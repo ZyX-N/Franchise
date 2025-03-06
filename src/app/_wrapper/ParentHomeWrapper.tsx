@@ -43,7 +43,7 @@ const ParentHomeWrapper: React.FC<parentHomeWrapperProps> = ({
 
         <section className="mx-auto w-full sm:h-[calc(100%-200px)] sm:w-2/3 text-center gap-3 sm:gap-6 px-4 sm:px-0 z-10 flex flex-col sm:items-center sm:justify-center">
           <h1 className="text-4xl sm:text-5xl font-bold">
-            Welcome to Restaurant Franchisee1
+            Welcome to Restaurant Franchisee
           </h1>
           <h2 className="text-lg sm:text-xl font-semibold sm:font-semibold">
             At Restaurant Franchisee, we help entrepreneurs and investors
