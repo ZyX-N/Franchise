@@ -99,7 +99,7 @@ export default function Home() {
                 <div className="border border-[#bf9877] p-8 bg-transparent flex flex-col justify-center items-center w-full">
                   <p className="text-center">
                     <strong>Restaurant Franchisee</strong> was founded with a
-                    clear goal: to make restaurant ownership more accessible to
+                    clear goal, to make restaurant ownership more accessible to
                     ambitious individuals looking to build a thriving business
                     with reduced risk. We recognize the challenges and
                     complexities of the restaurant industry, which is why we

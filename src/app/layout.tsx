@@ -39,7 +39,7 @@ export default function RootLayout({
         `}
         </Script>
       </Head>
-      <body>
+      <body className="w-full overflow-x-hidden">
         {children}
         <Footer />
       </body>

@@ -52,12 +52,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t flex justify-center items-center py-3 relative">
-        <p className="text-gray-400 text-xl">
+      <div className="border-t sm:flex sm:justify-center sm:items-center pl-5 sm:pl-0 py-3 relative">
+        <p className="text-gray-400 text-base sm:text-xl">
           &copy; 2025{" "}
           <span className="font-semibold text-gray-200">
             Resturant Franchisee
-          </span>{" "}
+          </span>
         </p>
 
         <Link

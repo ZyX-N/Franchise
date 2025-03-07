@@ -29,7 +29,7 @@ export default function Home() {
         <div className="w-full lg:w-1/2 px-2 lg:px-12">
           <p className="text-lg">
             <strong>Restaurant Franchisee</strong> was founded with a clear
-            goal: to make restaurant ownership more accessible to ambitious
+            goal, to make restaurant ownership more accessible to ambitious
             individuals looking to build a thriving business with reduced risk.
             We recognize the challenges and complexities of the restaurant
             industry, which is why we developed a franchise model that

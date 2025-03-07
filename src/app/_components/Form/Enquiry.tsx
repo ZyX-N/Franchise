@@ -22,8 +22,10 @@ interface formDataProp {
 
 export default function EnquiryForm({
   screen = "default",
+  onClose,
 }: {
   screen: string;
+  onClose?: any;
 }) {
   const router = useRouter();
 
@@ -48,7 +50,7 @@ export default function EnquiryForm({
     { label: "Lord of the Drinks", value: "Lord of the Drinks" },
     { label: "Diablo", value: "Diablo" },
     { label: "Bougie", value: "Bougie" },
-    { label: "Miso Sexy", value: "Miso Sexy" },
+    { label: "MisoSexy", value: "MisoSexy" },
     { label: "Noche", value: "Noche" },
     { label: "Tickled Pink", value: "Tickled Pink" },
     { label: "Plum by Bent Chair", value: "Plum by Bent Chair" },
@@ -62,17 +64,6 @@ export default function EnquiryForm({
     { label: "Daddy", value: "Daddy" },
   ];
 
-  // const cityOption = [
-  //   { label: "Bangalore", value: "Bangalore" },
-  //   { label: "Delhi", value: "Delhi" },
-  //   { label: "Chennai", value: "Chennai" },
-  //   { label: "Hyderabad", value: "Hyderabad" },
-  //   { label: "Mumbai", value: "Mumbai" },
-  //   { label: "Pune", value: "Pune" },
-  //   { label: "Kolkata", value: "Kolkata" },
-  //   { label: "Ahmedabad", value: "Ahmedabad" },
-  // ];
-
   const cityOption = cities;
 
   const [formData, setFormData] = useState<formDataProp>({
@@ -84,9 +75,6 @@ export default function EnquiryForm({
     currentBusiness: "",
     preferredBrand: "",
     investmentRange: "",
-    // interestedInRadio: "",
-    // relevantExperience: "",
-    // partner: "",
     comment: "",
   });
 
@@ -111,6 +99,11 @@ export default function EnquiryForm({
     if (!formData.email) {
       isValid = false;
       setError((prev) => ({ ...prev, email: "Email is required" }));
+    } else {
+      if (!formData.email.includes("@")) {
+        isValid = false;
+        setError((prev) => ({ ...prev, email: "Please enter a valid email" }));
+      }
     }
 
     if (!formData.phone) {
@@ -119,6 +112,14 @@ export default function EnquiryForm({
         ...prev,
         phoneNumber: "Phone Number is required",
       }));
+    } else {
+      if (formData.phone.length !== 10) {
+        isValid = false;
+        setError((prev) => ({
+          ...prev,
+          phoneNumber: "Please enter a valid 10-digit phone number",
+        }));
+      }
     }
 
     if (!formData.city) {
@@ -172,7 +173,6 @@ export default function EnquiryForm({
       message: formData?.comment || "",
     };
     let response = await postCall("/enquiry", {}, payload);
-    console.log(response);
     if (response.status) {
       router.push("/thank-you");
     }
@@ -183,7 +183,7 @@ export default function EnquiryForm({
       <form
         className={`w-full flex flex-col justify-center 
           ${screen === "default" ? "gap-6 px-4 sm:px-10 lg:px-20 py-0" : ""}
-          ${screen === "pop-up" ? "gap-6 px-4 sm:px-10 py-8" : ""}
+          ${screen === "pop-up" ? "gap-6 px-4 sm:px-10 py-0" : ""}
         `}
         onSubmit={submitHandler}
       >
@@ -534,13 +534,22 @@ export default function EnquiryForm({
           </div>
         </div>
 
-        <div className="w-full flex justify-end">
-          {/* <button
-            type="submit"
-            className="bg-[#bf9877] text-white rounded-3xl font-medium px-8 py-3 hover:scale-105 transition-all duration-300 ease-in-out"
-          >
-            Close
-          </button> */}
+        <div
+          className={`w-full flex gap-3 justify-between sm:justify-end ${
+            screen === "pop-up" ? "mb-2" : ""
+          }`}
+        >
+          {screen === "pop-up" && (
+            <button
+              type="button"
+              className="border border-[#bf9877] text-[#bf9877] rounded-3xl font-medium px-8 py-3 hover:scale-105 transition-all duration-300 ease-in-out"
+              onClick={() => {
+                onClose();
+              }}
+            >
+              Close
+            </button>
+          )}
           <button
             type="submit"
             className="bg-[#bf9877] text-white rounded-3xl font-medium px-8 py-3 hover:scale-105 transition-all duration-300 ease-in-out"

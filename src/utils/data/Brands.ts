@@ -27,7 +27,7 @@ const Brands: Array<{ name: string; image: any }> = [
     image: bougie,
   },
   {
-    name: "Miso Sexy",
+    name: "MisoSexy",
     image: misosexy,
   },
   // {
@@ -36,11 +36,11 @@ const Brands: Array<{ name: string; image: any }> = [
   //     "https://www.brandsandbranches.com/upload/franchise/logo/logo-1697443050.png",
   // },
   {
-    name: "Tickeled Pink",
+    name: "Tickled Pink",
     image: tickledPink,
   },
   {
-    name: "Plum by bent Chair",
+    name: "Plum by Bent Chair",
     image: plumByBentChair,
   },
   {
@@ -60,11 +60,11 @@ const Brands: Array<{ name: string; image: any }> = [
     image: flyingSaucer,
   },
   {
-    name: "Bizou Bizou",
+    name: "Bizou-Bizou",
     image: bizou,
   },
   {
-    name: "Thanks and Beyond",
+    name: "Thanks & Beyond",
     image: thnxNbeyond,
   },
   {
