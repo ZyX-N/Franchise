@@ -7,6 +7,7 @@ import Dropdown from "../Input/Dropdown";
 import { postCall } from "../../../service/apiCall";
 import { useRouter } from "next/navigation";
 import cities from "../../../utils/data/Indian_Cities";
+import SimpleDropdown from "../Input/Simple-Dropdown";
 
 interface formDataProp {
   firstName: string;
@@ -418,7 +419,7 @@ export default function EnquiryForm({
               <span className="text-red-600 font-medium">*</span>
             </label>
 
-            <Dropdown
+            <SimpleDropdown
               option={investmentRangeOptions}
               id="investment-range"
               value={formData.investmentRange}
@@ -433,6 +434,22 @@ export default function EnquiryForm({
                 }));
               }}
             />
+
+            {/* <Dropdown
+              option={investmentRangeOptions}
+              id="investment-range"
+              value={formData.investmentRange}
+              setValue={(val: string) => {
+                setFormData((prev) => ({
+                  ...prev,
+                  investmentRange: val,
+                }));
+                setError((prev) => ({
+                  ...prev,
+                  investmentRange: "",
+                }));
+              }}
+            /> */}
 
             {error?.investmentRange && (
               <span className="text-red-500 text-xs absolute top-[calc(100%+3px)] left-0">
